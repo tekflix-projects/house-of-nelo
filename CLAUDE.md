@@ -1,10 +1,10 @@
-# CLAUDE.md — CSI Designs
+# CLAUDE.md — CSI
 
 Working notes for Claude Code (and future you) on this project. Read this first
 before making changes so the site stays consistent with Chinelo's taste.
 
 ## The Studio
-- **Brand:** CSI Designs — the interior design studio of **Chinelo**.
+- **Brand:** CSI — the interior design studio of **Chinelo**.
 - **Tagline feel:** atelier, collected, warm luxury with an African soul.
 - **Founder:** Chinelo. BFA in Interior Design from **SCAD** (Savannah College of Art & Design). 5+ years of experience creating soulful homes, working alongside architects and builders.
 - **Based:** Abuja, Nigeria. Frequently in the **USA**, open to travel/remote (e-design).

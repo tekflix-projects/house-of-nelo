@@ -1,6 +1,6 @@
-# CSI Designs — Interior Design
+# CSI — Interior Design
 
-The website and client-intake experience for **CSI Designs**, the interior design
+The website and client-intake experience for **CSI**, the interior design
 studio of **Chinelo** — SCAD-trained, Abuja-based, designing across the USA and worldwide.
 
 Aesthetic: **Warm Afro-minimalism** — bone/cream, espresso ink, terracotta & ochre accents,
