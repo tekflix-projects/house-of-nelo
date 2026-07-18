@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start a Project — House of Nelo | Interior Design Inquiry</title>
+  <meta name="description" content="Begin your interior design project with House of Nelo. Share your vision, space, timeline and budget — Chinelo personally reviews every inquiry." />
+  <meta name="theme-color" content="#241d16" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="nav scrolled" id="nav">
+    <a class="brand" href="index.html" aria-label="House of Nelo home">
+      <span class="brand__mark">House of <b>Nelo</b></span>
+      <span class="brand__sub">Interior Design</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="nav__links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#process">Process</a>
+      <a class="btn btn--solid" href="inquire.html">Start a Project</a>
+    </nav>
+  </header>
+
+  <section class="section about-hero section--tight">
+    <div class="wrap center">
+      <span class="eyebrow center reveal in">Start a Project</span>
+      <h1 class="reveal in" data-delay="1" style="margin-top:1rem;">Tell us about<br />your <span class="serif-italic">vision</span>.</h1>
+      <p class="lead max-60 mx-auto reveal in" data-delay="2" style="margin-top:1.5rem;">The more you share, the better we can prepare for our first conversation. Chinelo personally reviews every inquiry.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap form-shell">
+
+      <!-- ASIDE -->
+      <aside class="form-aside reveal">
+        <h3 style="font-family:var(--serif); font-size:1.6rem; margin-bottom:1.2rem;">What happens next</h3>
+        <div class="list-check"><ul>
+          <li>We review your project details within 2–3 business days</li>
+          <li>If it's a fit, we schedule a discovery call</li>
+          <li>You receive a tailored proposal &amp; timeline</li>
+          <li>We begin designing your space</li>
+        </ul></div>
+        <p class="muted" style="margin-top:2rem; font-size:0.92rem;">Prefer to email? Reach us directly at <a class="textlink" href="mailto:hello@houseofnelo.com">hello@houseofnelo.com</a></p>
+      </aside>
+
+      <!-- FORM -->
+      <div>
+        <!-- SUCCESS MESSAGE -->
+        <div class="form-success">
+          <h3 style="font-family:var(--serif); font-size:1.8rem; color:var(--terracotta-deep);">Thank you — it's on its way. ✦</h3>
+          <p style="margin-top:0.8rem;">Your inquiry has landed with House of Nelo. We'll be in touch within 2–3 business days. In the meantime, keep dreaming up that space.</p>
+        </div>
+
+        <!-- =========================================================
+             SETUP: replace YOUR_FORM_ID below with the ID from a free
+             Formspree form (formspree.io) pointed at your inbox.
+             See README.md → "Connecting the intake form".
+             ========================================================= -->
+        <form data-inquiry action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New project inquiry — House of Nelo" />
+          <!-- honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" required placeholder="you@email.com" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone / WhatsApp</label>
+              <input id="phone" name="phone" type="tel" placeholder="+234 … or +1 …" />
+            </div>
+            <div class="field">
+              <label for="location">Project Location <span class="req">*</span></label>
+              <input id="location" name="location" type="text" required placeholder="City, Country" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Project Type <span class="req">*</span></label>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="project_type" value="Full Home" required /><span>Full Home</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="Single Room" /><span>Single Room</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="Renovation" /><span>Renovation</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="New Build" /><span>New Build</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="Styling / Refresh" /><span>Styling / Refresh</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="E-Design (Virtual)" /><span>E-Design (Virtual)</span></label>
+              <label class="chip"><input type="radio" name="project_type" value="Commercial" /><span>Commercial</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Rooms Involved</label>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="rooms" value="Living Room" /><span>Living Room</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Kitchen" /><span>Kitchen</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Primary Bedroom" /><span>Primary Bedroom</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Bathroom" /><span>Bathroom</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Dining" /><span>Dining</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Home Office" /><span>Home Office</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Outdoor" /><span>Outdoor</span></label>
+              <label class="chip"><input type="checkbox" name="rooms" value="Whole Home" /><span>Whole Home</span></label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="">Not sure yet — help me decide</option>
+                <option>Full-Service Design</option>
+                <option>Renovation / New Build</option>
+                <option>Styling &amp; Curation</option>
+                <option>E-Design (Virtual)</option>
+                <option>Consultation Only</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline">Ideal Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select…</option>
+                <option>As soon as possible</option>
+                <option>Within 1–3 months</option>
+                <option>3–6 months</option>
+                <option>6–12 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Investment Range <span class="req">*</span></label>
+            <p class="form-note">A budget helps us recommend the right level of service. All figures in USD (or equivalent).</p>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="budget" value="Under $10k" required /><span>Under $10k</span></label>
+              <label class="chip"><input type="radio" name="budget" value="$10k – $25k" /><span>$10k – $25k</span></label>
+              <label class="chip"><input type="radio" name="budget" value="$25k – $50k" /><span>$25k – $50k</span></label>
+              <label class="chip"><input type="radio" name="budget" value="$50k – $100k" /><span>$50k – $100k</span></label>
+              <label class="chip"><input type="radio" name="budget" value="$100k+" /><span>$100k+</span></label>
+              <label class="chip"><input type="radio" name="budget" value="Not sure yet" /><span>Not sure yet</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="vision">Describe Your Vision <span class="req">*</span></label>
+            <textarea id="vision" name="vision" required placeholder="Tell us about your space, your style, the feeling you want, and anything you love or want to avoid. The more detail, the better."></textarea>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="style">Style Words</label>
+              <input id="style" name="style_words" type="text" placeholder="e.g. warm, minimal, collected, earthy" />
+            </div>
+            <div class="field">
+              <label for="referral">How did you hear about us?</label>
+              <select id="referral" name="referral">
+                <option value="">Select…</option>
+                <option>Instagram</option>
+                <option>Pinterest</option>
+                <option>Google search</option>
+                <option>Referral from a friend</option>
+                <option>Worked together before</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="links">Inspiration Links (optional)</label>
+            <input id="links" name="inspiration_links" type="text" placeholder="Pinterest board, Instagram saves, or reference URLs" />
+          </div>
+
+          <button type="submit" class="btn btn--terra" style="justify-self:start;">Send My Inquiry <span class="arrow">→</span></button>
+          <p class="form-note">By submitting, you agree to be contacted about your project. We never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="brand__mark">House of <b>Nelo</b></span>
+          <p>Warm, collected, soulful interiors by Chinelo. Based in Abuja, Nigeria — designing across the USA and worldwide.</p>
+        </div>
+        <div><h4>Explore</h4><ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="inquire.html">Start a Project</a></li>
+        </ul></div>
+        <div><h4>Connect</h4><ul>
+          <li><a href="mailto:hello@houseofnelo.com">hello@houseofnelo.com</a></li>
+          <li><a href="https://instagram.com/houseofnelo" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://pinterest.com/houseofnelo" target="_blank" rel="noopener">Pinterest</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> House of Nelo · Interior Design. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="https://instagram.com/houseofnelo" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://pinterest.com/houseofnelo" target="_blank" rel="noopener">Pinterest</a>
+          <a href="mailto:hello@houseofnelo.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
