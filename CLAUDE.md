@@ -19,7 +19,7 @@ before making changes so the site stays consistent with Chinelo's taste.
 ## Design System (do not drift without asking)
 - **Aesthetic:** Warm Afro-minimalism.
 - **Palette:** bone/cream backgrounds, espresso ink, **terracotta** + **ochre** accents, warm woods, muted olive. All tokens in `assets/css/styles.css` `:root`.
-- **Type:** `Fraunces` (display serif) for headings, `Inter` (sans) for body/UI. Loaded via Google Fonts.
+- **Type:** `Cormorant Garamond` (soft, high-fashion display serif, weight 500) for headings; `Jost` (smooth geometric sans) for body/UI. Loaded via Google Fonts. Chosen for an upscale, sophisticated, soft feel. (Previous pairing was Fraunces + Inter.)
 - **Voice/copy:** warm, confident, personal, first-person from Chinelo where it fits. Emphasize *feeling*, *story*, *soul*, *collected over time*. Avoid corporate jargon.
 
 ## Architecture

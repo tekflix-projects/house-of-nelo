@@ -31,8 +31,8 @@
   --shadow: 0 24px 60px -30px rgba(36, 29, 22, 0.45);
   --shadow-soft: 0 12px 40px -24px rgba(36, 29, 22, 0.35);
 
-  --serif: "Fraunces", "Cormorant Garamond", Georgia, serif;
-  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Cormorant Garamond", "Fraunces", Georgia, serif;
+  --sans: "Jost", "Helvetica Neue", Arial, sans-serif;
 
   --wrap: 1240px;
   --gutter: clamp(1.25rem, 5vw, 5rem);
@@ -48,8 +48,10 @@ body {
   font-family: var(--sans);
   background: var(--cream);
   color: var(--espresso);
-  line-height: 1.65;
-  font-size: 17px;
+  line-height: 1.72;
+  font-size: 16.5px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
@@ -58,11 +60,11 @@ button { font-family: inherit; cursor: pointer; }
 ul { list-style: none; padding: 0; }
 
 /* ---------- Type ---------- */
-h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.06; letter-spacing: -0.01em; }
-h1 { font-size: clamp(2.8rem, 7vw, 6rem); }
-h2 { font-size: clamp(2rem, 4.5vw, 3.6rem); }
-h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
-.serif-italic { font-style: italic; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.04; letter-spacing: -0.005em; }
+h1 { font-size: clamp(3.2rem, 8.2vw, 7.2rem); font-weight: 500; }
+h2 { font-size: clamp(2.3rem, 5vw, 4.3rem); }
+h3 { font-size: clamp(1.55rem, 2.7vw, 2.2rem); }
+.serif-italic { font-style: italic; font-weight: 500; }
 
 .eyebrow {
   font-family: var(--sans);
@@ -155,7 +157,7 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
   box-shadow: 0 1px 0 var(--line-soft);
 }
 .brand { display: flex; flex-direction: column; line-height: 1; }
-.brand__mark { font-family: var(--serif); font-size: 1.5rem; letter-spacing: 0.02em; }
+.brand__mark { font-family: var(--serif); font-size: 1.75rem; letter-spacing: 0.03em; font-weight: 500; }
 .brand__mark b { font-weight: 600; }
 .brand__sub { font-size: 0.6rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--stone); margin-top: 4px; }
 
@@ -459,4 +461,74 @@ form { display: grid; gap: 1.6rem; }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .testi { grid-template-columns: 1fr 1fr; }
+  /* keep featured work two-up on tablets instead of one big column */
+  .projects .project { grid-column: span 6; }
 }
+
+/* ---- Phones (≤600px) ---- */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .section { padding-block: clamp(3rem, 12vw, 4.5rem); }
+  .nav { padding: 1.1rem var(--gutter); }
+  .brand__mark { font-size: 1.5rem; }
+  h1 { font-size: clamp(2.5rem, 11vw, 4rem); }
+  /* let long hero/headline lines wrap naturally instead of clipping */
+  .hero h1 br { display: none; }
+  .hero h1 { text-wrap: balance; }
+
+  /* Hero: text-first, comfortable stacking */
+  .hero { min-height: auto; padding-top: 7rem; padding-bottom: 4rem; align-items: center; }
+  .hero__grid { gap: 2rem; }
+  .hero__scroll { display: none; }
+  .hero__stats { gap: 1.5rem 2rem; }
+  .stat b { font-size: 2rem; }
+
+  /* Featured work: single, full-width, taller frames read better on phones */
+  .projects { grid-template-columns: 1fr; }
+  .projects .project { grid-column: span 1; }
+  .frame--wide { aspect-ratio: 4 / 3; }
+
+  /* Portfolio gallery: one clean column */
+  .gallery { grid-template-columns: 1fr; }
+
+  /* Filters: horizontal scroll instead of wrapping into many rows */
+  .filters { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start;
+    -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter { flex: 0 0 auto; }
+
+  /* Process / credentials / timeline stack fully */
+  .process__row { grid-template-columns: 1fr; gap: 0.75rem; }
+  .process__num { font-size: 2.4rem; }
+  .credentials, .timeline__row { grid-template-columns: 1fr; }
+  .timeline__row { gap: 0.5rem; }
+
+  /* Forms: full-width chips & inputs */
+  .chip span { display: block; }
+
+  /* Lightbox comfy on small screens */
+  .lightbox { padding: 1rem; }
+  .lightbox__close { top: 0.75rem; right: 1rem; font-size: 2.4rem; }
+
+  /* Footer social wraps neatly */
+  .footer__social { flex-wrap: wrap; gap: 1rem; }
+}
+
+/* ---- Very small phones (≤380px) ---- */
+@media (max-width: 380px) {
+  :root { --gutter: 1.1rem; }
+  h1 { font-size: 2.3rem; }
+  .btn { padding: 1em 1.6em; font-size: 0.78rem; }
+  .hero__stats { gap: 1.2rem 1.6rem; }
+  .stat b { font-size: 1.8rem; }
+}
+
+/* Respect device safe areas (notches) */
+@supports (padding: max(0px)) {
+  .nav { padding-left: max(var(--gutter), env(safe-area-inset-left));
+         padding-right: max(var(--gutter), env(safe-area-inset-right)); }
+}
+
+/* Media never overflows its container on any device */
+img, svg, video { max-width: 100%; height: auto; }
+.frame img { height: 100%; }
