@@ -156,10 +156,13 @@ h3 { font-size: clamp(1.55rem, 2.7vw, 2.2rem); }
   padding-block: 1rem;
   box-shadow: 0 1px 0 var(--line-soft);
 }
-.brand { display: flex; flex-direction: column; line-height: 1; }
-.brand__mark { font-family: var(--serif); font-size: 1.75rem; letter-spacing: 0.03em; font-weight: 500; }
+.brand { display: inline-flex; flex-direction: column; align-items: center; text-align: center; line-height: 1; }
+/* "CSI" tracked out into a monogram that sits centered over the descriptor.
+   text-indent offsets the trailing letter-spacing so the block is optically centered. */
+.brand__mark { font-family: var(--serif); font-size: 1.9rem; letter-spacing: 0.42em; text-indent: 0.42em; font-weight: 500; }
 .brand__mark b { font-weight: 600; }
-.brand__sub { font-size: 0.6rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--stone); margin-top: 4px; }
+/* Descriptor tuned so its width reads in the same key as the monogram above it. */
+.brand__sub { font-size: 0.56rem; letter-spacing: 0.3em; text-indent: 0.3em; text-transform: uppercase; color: var(--stone); margin-top: 7px; }
 
 .nav__links { display: flex; align-items: center; gap: 2.2rem; }
 .nav__links a { font-size: 0.82rem; letter-spacing: 0.06em; font-weight: 500; position: relative; }
