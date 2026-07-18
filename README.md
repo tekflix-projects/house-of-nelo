@@ -1,10 +1,10 @@
-# House of Nelo — Interior Design
+# CSI Designs — Interior Design
 
-The website and client-intake experience for **House of Nelo**, the interior design
+The website and client-intake experience for **CSI Designs**, the interior design
 studio of **Chinelo** — SCAD-trained, Abuja-based, designing across the USA and worldwide.
 
 Aesthetic: **Warm Afro-minimalism** — bone/cream, espresso ink, terracotta & ochre accents,
-`Fraunces` + `Inter` type. Slick, editorial, and built to convert new clients.
+`Cormorant Garamond` + `Jost` type. Slick, editorial, and built to convert new clients.
 
 ---
 
@@ -63,8 +63,8 @@ One-time setup after the repo exists:
 3. Your site goes live at `https://<owner>.github.io/<repo>/`.
 
 ### Custom domain (optional)
-1. Buy a domain (e.g. `houseofnelo.com`).
-2. Add a file named `CNAME` at the repo root containing just: `houseofnelo.com`.
+1. Buy a domain (e.g. `csidesigns.com`).
+2. Add a file named `CNAME` at the repo root containing just: `csidesigns.com`.
 3. Point the domain's DNS at GitHub Pages, then set it under **Settings → Pages**.
 
 ---
